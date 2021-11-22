@@ -1,6 +1,7 @@
 
 #import config
 import requests
+import time
 from bs4 import BeautifulSoup
 from PIL import Image, ImageFont, ImageDraw
 
@@ -122,8 +123,8 @@ def post(lst_oil_prices):
 
 
     my_image.save("images/result.jpg")
-    page_id_1 = '106970961780353'
-    facebook_access_token_1 = 'EAAc3CGgol0oBALqQ5ckZBLKZBud3tsWy37kpZBFXDngZBzWQVb8vzhO01fbhh4kU0nNZBxiUZBFYCt5jj90jyMY9FzAEfPnpqGxfcRlCvFwBcDG6ZAXgTuqBkLmhswoGrpLBst1g3tnCZARKHAZCHE0Eu3JdfropDGbx0vBKqOxaZCKUovG6MXZCIjb'
+    page_id_1 = '385114094931345'
+    facebook_access_token_1 = 'EAARnlhMWujcBACLzGOKZCkFZCUnM3iwB39G8ZBTZA7F3yGkCNRXsUNm9iZAlY49DVAGCTpPUh4TZBHCa6xjo2vfNRBY22YlqrbK28BBpHzBZCgpsAxmoyav7eZBHlFHJVrFRHjIRRl4tGSyowHe4fkX7yI8siEcepD7ZAcoCif144nX4SfQZAwDl1X'
     image_url = 'https://graph.facebook.com/{}/photos'.format(page_id_1)
     img_payload = {
         'access_token': facebook_access_token_1
@@ -135,7 +136,9 @@ def post(lst_oil_prices):
 ##############################################################################################
 
 if __name__ == '__main__':
-    my_post = scrape()
-    print('Done scraping')
-    post(my_post)
-    print('Done posting')
+    while(true):
+        my_post = scrape()
+        print('Done scraping')
+        post(my_post)
+        print('Done posting')
+        time.sleep(60*60*24)
