@@ -123,8 +123,8 @@ def post(lst_oil_prices):
 
 
     my_image.save("images/result.jpg")
-    page_id_1 = '385114094931345'
-    facebook_access_token_1 = 'EAARnlhMWujcBACLzGOKZCkFZCUnM3iwB39G8ZBTZA7F3yGkCNRXsUNm9iZAlY49DVAGCTpPUh4TZBHCa6xjo2vfNRBY22YlqrbK28BBpHzBZCgpsAxmoyav7eZBHlFHJVrFRHjIRRl4tGSyowHe4fkX7yI8siEcepD7ZAcoCif144nX4SfQZAwDl1X'
+    page_id_1 = 'ADD YOUR OWN PAGE ID HERE'
+    facebook_access_token_1 = 'ADD YOUR OWN ACCESS TOKEN HERE'
     image_url = 'https://graph.facebook.com/{}/photos'.format(page_id_1)
     img_payload = {
         'access_token': facebook_access_token_1
